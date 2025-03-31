@@ -10,8 +10,8 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Set the OpenAI API key (make sure to replace this with your actual API key)
-openai.api_key = "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"
 
+openai.api_key = os.getenv("OPENAI_API_KEY")
 # Define file upload folder and allowed file extensions
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'zip', 'csv'}
